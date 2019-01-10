@@ -86,11 +86,11 @@ public:
     virtual void Redo();
 
     //Find function
-    virtual long Find(const wxString& text, int flags = wxWEBVIEW_FIND_DEFAULT) 
-    { 
+    virtual long Find(const wxString& text, int flags = wxWEBVIEW_FIND_DEFAULT)
+    {
         wxUnusedVar(text);
         wxUnusedVar(flags);
-        return wxNOT_FOUND; 
+        return wxNOT_FOUND;
     }
 
     //Clipboard functions
@@ -158,7 +158,7 @@ private:
     wxWindowID m_windowID;
     wxString m_pageTitle;
 
-    wxObjCID m_webView;
+    OSXWebViewPtr m_webView;
 
     // we may use this later to setup our own mouse events,
     // so leave it in for now.
